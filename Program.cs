@@ -3,7 +3,11 @@
 namespace Fibonacci {
     static class Program {
         static void Main(string[] args) {
-            int[] fibonacci = CreateFibonacciSeries(5);
+            int num = 5;
+            
+            if(args.Length == 1)
+                num = int.Parse(args[0]);
+            int[] fibonacci = CreateFibonacciSeries(num);
 
             for (int i = 0; i < fibonacci.Length; i++) {
                 Console.Out.Write(fibonacci[i]);
